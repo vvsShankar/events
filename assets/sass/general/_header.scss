@@ -1,0 +1,82 @@
+/*!
+Theme name: Event Mangement
+Theme URI: https://vishnuvijayshankar.com
+Version: 1.0
+Author: Vishnu vijay sankar
+Author URI: https: //vishnuvijayshankar.com
+Text Domain: vishnuvijayshankar
+*/
+body{
+    position: relative;
+
+.navbar {
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    z-index: 3;
+    max-width: 1560px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+
+    .navbar-brand {
+            float: left;
+            margin-left: 4%;
+            display: block;
+            padding-top: 0px;
+            font-size: 60px;
+            line-height: 1;
+            font-weight: bold;
+            font-family: $primary;
+            text-transform: capitalize;
+            color: $white;
+            text-decoration: none;
+            padding: 30px;
+
+            &::after{
+                content: "■";
+                color: $redpink;
+                border-radius: 0px;
+                font-size: 24px;
+                margin: 0 3px;
+            }
+    }
+
+    .navbar-nav {
+        list-style: none;
+        display: none;
+        margin: 0;
+        padding: 0;
+        color: $white;
+        .nav-item {
+            margin: 0 10px;
+            display: inline;
+
+            .nav-link {
+                text-decoration: none;
+                color: #333;
+            }
+        }
+    }
+}
+}
+/* Media query for mobile responsiveness */
+@media screen and (max-width: $breakpointMedium) {
+    .navbar {
+        flex-direction: column;
+        .navbar-brand {
+            padding: 30px;
+        }
+        .menu-toggle {
+            display: block;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+        .navbar-nav {
+            display: block;
+        }
+        .navbar-nav.show {
+            display: block;
+        }
+    }
+}

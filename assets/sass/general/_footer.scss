@@ -1,0 +1,75 @@
+
+.footer {
+    background: $black;
+    padding: 50px 0;
+    color: $white;
+    width: 100%;
+    max-width: 1560px;
+
+    .footer-columns {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: start;
+        align-items: center;
+        gap: 20px;
+        width: 90%;
+        margin: 0 auto;
+        .footer-column{
+            width: 100%;
+            h4{
+                font-size: 30px;
+                font-family: $primary;
+                color: $white;
+                font-weight: 500;
+            }
+            p{
+                .post-title {
+                    font-size: 18px;
+                    font-family: $secondary;
+                    font-weight: 300;
+                    color: $white;
+                    text-decoration: none;
+                    cursor: pointer;
+                    transition: all 0.4s ease;
+            
+                    &:hover {
+                        color: $redpink;
+                        font-size: 19px;
+                    }
+                }
+                &:first-child {
+                    color: $redpink;
+                }
+            }
+
+            p{
+                font-size: 18px;
+                font-family: $secondary;
+                font-weight: 300;
+                color: $white;
+                text-decoration: none;
+                cursor: pointer;
+                transition: all 0.4s ease;
+                line-height: 24px;
+            }
+        }
+
+    }
+}
+
+@media only screen and (min-width: $breakpointMedium) {
+.footer {
+
+        .footer-columns {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+@media only screen and (min-width: $breakpointLarge) {
+.footer {
+
+        .footer-columns {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}

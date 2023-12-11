@@ -1,0 +1,28 @@
+
+//npm install sass
+//sass --watch assets/sass/style.scss:style.css --style compressed
+
+//fonts
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,800;1,100;1,400&display=swap');
+
+//common
+@import 'general/varibles';
+@import 'general/header';
+@import 'general/footer';
+@import 'general/common';
+
+
+//banner
+@import 'banner/banner';
+
+//about
+@import 'about/about';
+ 
+//events
+@import 'events/grid'; 
+
+//speakers
+@import 'speakers/speaker';
+ 
+//upcoming events slider
+@import 'slider/slider';

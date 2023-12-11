@@ -1,0 +1,31 @@
+
+*{
+    font-family: $primary;
+    margin: 0 auto;
+    font-size: 18px;
+}
+html {
+    margin-top: 0px !important;
+}
+h1{
+    font-size: 24px;
+    font-family: $primary;
+    color:$black ;
+}
+
+
+///key frames
+
+@keyframes blurtoLive {
+    0% {
+        filter: blur(2px);
+    }
+
+    50% {
+        filter: blur(5px);
+    }
+
+    100% {
+        filter: blur(0);
+    }
+}

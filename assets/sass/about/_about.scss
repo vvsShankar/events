@@ -1,0 +1,191 @@
+.about-section {
+    position: relative;
+    padding: 20px 0;
+    width: 100%;
+    max-width: 1560px;
+    margin: 0 auto;
+    .row{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+        width: 90%;
+        margin: 0 auto;
+    .content-column {
+        position: relative;
+        margin-bottom: 40px;
+
+        .inner-column {
+            position: relative;
+            padding-top: 50px;
+            padding-right: 100px;
+
+            .text {
+                position: relative;
+                color: $blackLight;
+                font-size: 18px;
+                line-height: 2em;
+                margin-bottom: 40px;
+                font-family: $secondary;
+            }
+
+            .detail {
+                position: relative;
+                color: $blackLight;
+                font-weight: 300;
+                margin-bottom: 50px;
+                display: flex;
+                justify-content: space-between;
+
+                .theme_color{
+                    margin: 0;
+                    i{
+                        margin: 0 5px;
+                    }
+                }
+            }
+        }
+    }
+
+    .image-column {
+        position: relative;
+        margin-bottom: 50px;
+
+        .inner-column {
+            position: relative;
+            padding: 40px 40px 0 0;
+            margin-left: 50px;
+
+            &:after {
+                position: absolute;
+                content: '';
+                right: 0;
+                top: 0;
+                left: 40px;
+                bottom: 100px;
+                z-index: -1;
+                border: 2px solid $redpink;
+            }
+
+            .image {
+                position: relative;
+
+                &:before {
+                    position: absolute;
+                    content: '';
+                    left: -50px;
+                    bottom: -50px;
+                    width: 299px;
+                    height: 299px;
+                }
+
+                img {
+                    position: relative;
+                    width: 100%;
+                    display: block;
+                }
+
+                .overlay-box {
+                    position: absolute;
+                    left: 40px;
+                    bottom: 48px;
+
+                    .year-box {
+                        position: relative;
+                        color: #252525;
+                        font-size: 24px;
+                        font-weight: 700;
+                        line-height: 1.4em;
+                        padding-left: 125px;
+
+                        .number {
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            width: 110px;
+                            height: 110px;
+                            color: $redpink;
+                            font-size: 68px;
+                            font-weight: 700;
+                            line-height: 105px;
+                            text-align: center;
+                            background-color: $white;
+                            border: 1px solid $black;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .btn-style-three {
+        position: relative;
+        line-height: 24px;
+        color: #252525;
+        font-size: 15px;
+        font-weight: 700;
+        background: none;
+        display: inline-block;
+        padding: 11px 40px;
+        background-color: $white;
+        text-transform: capitalize;
+        border: 2px solid $redpink;
+        font-family: $secondary;
+        text-decoration: none;
+
+        &:before {
+            position: absolute;
+            content: '';
+            left: 10px;
+            top: 10px;
+            z-index: -1;
+            right: -10px;
+            bottom: -10px;
+            background: url(https://i.ibb.co/DKn55Qz/pattern-1.jpg) repeat;
+        }
+
+        &:hover {
+            color: $white;
+            background: $redpink;
+        }
+    }
+
+    .sec-title2 {
+    color: $black;
+    }
+
+    .sec-title {
+        position: relative;
+        padding-bottom: 40px;
+
+        .title {
+            position: relative;
+            color: $redpink;
+            font-size: 18px;
+            font-weight: 700;
+            padding-right: 50px;
+            margin-bottom: 15px;
+            display: inline-block;
+            text-transform: capitalize;
+
+            &:before {
+                position: absolute;
+                content: '';
+                right: 0;
+                bottom: 7px;
+                width: 40px;
+                height: 1px;
+                background-color: #bbbbbb;
+            }
+        }
+    }
+    }
+
+}
+@media only screen and (min-width: $breakpointMedium) {
+.about-section {
+    padding: 50px 0;
+        .row {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+}

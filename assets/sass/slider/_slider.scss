@@ -1,0 +1,122 @@
+
+.events-section{
+    padding: 100px 0;
+    max-width: 1560px;
+    margin: 0 auto;
+    width: 100%;
+    background-color: $black;
+
+    .event-titles{
+        color: $white;
+        font-family: $primary;
+        font-size: 60px;
+        line-height: 65px;
+        width: 100%;
+        text-align: center;
+        padding:0 0 50px 0;
+        text-transform: capitalize;
+    }
+    .event-slider{
+        width: 70%;
+        margin: 0 auto;
+        position: relative;
+
+        .prev{
+            position: absolute;
+            left: -20px;
+            top: 0;
+            bottom: 0;
+            right: auto;
+            background: transparent;
+            border: 0;
+            
+            i{
+                border: 1px solid $redpink;
+                border-radius: 30px;
+                position: relative;
+                right: 30px;
+                height: 50px;
+                width: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: all 0.4s ease;
+                color: $redpink;
+                cursor: pointer;
+                &:hover{
+                    background: $redpink;
+                    color: $white;
+                }
+            }
+        }
+        .next{
+            position: absolute;
+            left: auto;
+            top: 0;
+            bottom: 0;
+            right: -20px;
+            background: transparent;
+            border: 0;
+
+            i {
+                border: 1px solid $redpink;
+                border-radius: 30px;
+                position: relative;
+                left: 30px;
+                height: 50px;
+                width: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: all 0.4s ease;
+                color: $redpink;
+                cursor: pointer;
+            
+                    &:hover {
+                        background: $redpink;
+                        color: $white;
+                    }
+                }
+        }
+        .slick-disabled{
+            display: none !important;
+        }
+        .slider-title {
+            width: 90%;
+            color: $white;
+            margin-bottom: 10px;
+            padding:20px 0 0 0;
+        }
+        .slider-desc {
+            width: 90%;
+            color: $white;
+            font-weight: 300;
+            font-family: $secondary;
+            font-size: 18px;
+            line-height: 24px;
+        }
+        .event-img {
+            width: 90%;
+            max-height: 200px;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+}
+
+@media only screen and (min-width: $breakpointMedium) {
+.events-section {
+
+        .event-slider {
+            width: 80%;
+
+            .prev {
+                left: -25px;
+            }
+
+            .next {
+                right: -25px;
+            }
+        }
+    }
+}
