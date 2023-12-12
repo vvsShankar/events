@@ -1,4 +1,3 @@
 Please note that 
-the following folders are plugins. This needs to go inside the plugin folder.
-Custom post type 
-event details
+Custom post type and event details are plugin folders. This needs to go inside the plugin folder.
+
