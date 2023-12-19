@@ -29,7 +29,6 @@
                     font-weight: 300;
                     color: $white;
                     text-decoration: none;
-                    cursor: pointer;
                     transition: all 0.4s ease;
             
                     &:hover {
@@ -37,8 +36,11 @@
                         font-size: 19px;
                     }
                 }
-                &:first-child {
-                    color: $redpink;
+                &:first-child{
+
+                    .post-title {
+                        color: $redpink;
+                    }
                 }
             }
 

@@ -14,7 +14,7 @@ $page_content = $page->post_content;
 
 <section class="home-banner">
 
-    <img src="<?php echo esc_url('http://events.local/wp-content/uploads/2023/12/header-bg-scaled.jpg'); ?>" alt="Header Image" class="background-img">
+    <img src="<?php echo esc_url('/wp-content/uploads/2023/12/header-bg-scaled.jpg'); ?>" alt="Header Image" class="background-img">
         <div class="innner-sec">
             <h1 class="event-title"><?= $page_title; ?></h1>
         </div>
@@ -64,51 +64,4 @@ $page_content = $page->post_content;
     <div class="spekers-sliders">
     </div>
 </section>
-
-
-<script>
-    // Function to fetch data from the API and handle errors
-    const fetchData = () => {
-        fetch('https://jsonplaceholder.typicode.com/users')
-        .then(res => {
-        if (!res.ok) {
-            throw new Error('*** Failed to fetch data');
-        }
-        return res.json();
-        })
-        .then(data => {
-        const userDetails = data.map(user => {
-            const nameMarkup = `<h4 class="name">${user.name}</h4>`;
-            const emailMarkup = `<p class="email">${user.email}</p>`;
-            return `<div class="list">${nameMarkup}${emailMarkup}</div>`;
-        });
-        document.querySelector('.spekers-sliders').innerHTML = userDetails.join('');
-
-        // Cache the fetched data in the browser's local storage
-        localStorage.setItem('cachedUserData', JSON.stringify(data));
-        })
-        .catch(error => {
-        console.log('Error:', error.message);
-        const errorMessage = `<p>Failed to fetch data. Please try again later.</p>`;
-        document.querySelector('.spekers-sliders').innerHTML = errorMessage;
-        
-        // Attempt to retrieve cached data and display it if available
-        const cachedData = localStorage.getItem('cachedUserData');
-        if (cachedData) {
-            const data = JSON.parse(cachedData);
-            const userDetails = data.map(user => {
-            const nameMarkup = `<h4 class="name">${user.name}</h4>`;
-            const emailMarkup = `<p class="email">${user.email}</p>`;
-            return `<div class="list">${nameMarkup}${emailMarkup}</div>`;
-            });
-            document.querySelector('.spekers-sliders').innerHTML = userDetails.join('');
-        }
-        });
-    };
-
-    // Fetch data when the DOM content is loaded
-    document.addEventListener('DOMContentLoaded', fetchData);
-</script>
-
-
 <?php get_footer();?>
